@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset de Propriedade */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #25463C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: relative;
+    z-index: 10;
+}
+
+header .header-flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-flex #logotipo {
+    height: 40px;
+}
+
+/* Links de Navegação */
+.links_header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links_header a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.links_header a:hover {
+    border-bottom: 1px solid white;
+    transition: 0.3s ease;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 48%;
+    background-color: #FFFFFF;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #25463C;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #F0F0F0;
+    color: #2B876B;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.show-arrow .arrow {
+    transform: rotate(90deg);
+}
+
+/* Mídia Header */
+.midia_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 320px;
+}
+
+.midia_header #mail_nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.midia_header a img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Controle do Checkbox */
+.hamburger-checkbox {
+    display: none;
+}
+
+/* Ícone de Menu Hambúrguer */
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Menu Mobile Inicial */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #25463C;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    padding: 20px;
+    z-index: 10;
+
+    align-items: center;
+}
+
+/* Exibe o Menu Mobile ao Marcar o Checkbox */
+.hamburger-checkbox:checked + .hamburger-icon + .mobile-menu {
+    display: flex;
+}
+
+/* Ajustes para o Mobile */
+@media screen and (max-width: 768px) {
+    .links_header,
+    .midia_header {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    #mobile_menu a {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+        padding: 10px;
+        text-align: start;
+        width: 100%;
+    }
+
+    #mobile_menu .services_nav {
+        margin-left: 20px;
+    }
+
+    #mobile_menu .services_nav a {
+        display: block;
+        font-size: 16px;
+        position: relative;
+        padding-left: 15px;
+    }
+
+    #mobile_menu .services_nav a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    #hr {
+        margin: 30px 0;
+        width: 100%;
+    }
+
+    #mobile_menu .midia_header_mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+}
