@@ -1,74 +1,239 @@
-body {
+/* Ajustes para a seção de serviços */
+#servicos {
+    text-align: center;
+    padding: 40px 15px;
+    width: 80%;
+}
+
+#servicos h2 {
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
+    font-size: 36px;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+.servicos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.servico-card {
+    background-image: url('../assets/images/card.png');
+    border-radius: 10px;
+    padding: 15px;
+    text-align: start;
+    max-width: 280px;
+    height: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    background-color: #f0f0f0;
+.servico-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
 
+.servico-card img {
+    height: 150px;
+}
+
+.servico-card h3 {
+    margin: 15px 0;
+    color: white;
     font-family: "Montserrat", sans-serif;
-}
-
-#element {
-    position: absolute;
-    right: 0;
-    bottom: 0px;
-}
-
-#img {
-    position: absolute;
-    top: 120px;
-    right: 50px;
-}
-
-#service {
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 80%;
-
-    margin-top: 5%;
-}
-
-#service h2 {
-    text-align: start;
-    width: 100%;
-
+    font-size: 22px;
     text-transform: uppercase;
-    font-size: 32px;
-
-    margin-bottom: 20px;
+    padding: 10px 0 20px 0;
 }
 
-.services_nav a {
-    display: block;
-    font-size: 18px;
-    position: relative;
-    padding-left: 15px;
-
-    text-align: start;
-
+.btn-ver-mais {
+    display: inline-block;
+    width: 80%;
+    background-color: #2B876B;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
     text-decoration: none;
-
-    color: black;
-
-    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.services_nav a:hover {
-   color: #2B876B;
+.btn-ver-mais2 {
+    display: inline-block;
+    width: 80%;
+    background-color: white;
+    color: #2B876B;
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.services_nav a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: #25463C;
-    border-radius: 50%;
+/* Responsividade para a seção Serviços e Produtos */
+/* Ajustes gerais */
+@media screen and (max-width: 768px) {
+    /* Banner */
+    #banner {
+        padding: 30px 15px;
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #banner h1 {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-contate-nos {
+        font-size: 14px;
+        padding: 8px 35px;
+        margin-top: 25px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    /* Serviços e Produtos */
+    #servicos {
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .servicos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .servico-card {
+        padding: 20px;
+        height: auto;
+    }
+
+    .servico-card h3 {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .btn-ver-mais, .btn-ver-mais2 {
+        font-size: 14px;
+        width: 90%;
+        padding: 8px 0;
+    }
+
+    /* Sobre Nós */
+    #sobre-nos {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .textAbout {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #sobre-nos h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    #sobre-nos p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .destaques {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+    .destaques img {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .destaques img:last-child {
+        margin-right: 0;
+    }
+
+    .destaque h3 {
+        color: #2B876B;
+        font-size: 20px;
+    }
+
+    /* Mobile Menu */
+    #mobile_menu a {
+        font-size: 18px;
+        margin: 12px 0;
+        padding: 12px;
+    }
+
+    /* Footer */
+    footer ul {
+        display: block;
+        margin-top: 20px;
+    }
+
+    footer ul li {
+        margin: 10px 0;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }
+
+@media screen and (max-width: 480px) {
+    /* Banner ajustado para telas muito pequenas */
+    #banner h1 {
+        font-size: 18px;
+    }
+
+    .btn-contate-nos {
+        padding: 8px 25px;
+        font-size: 12px;
+    }
+
+    /* Serviços e Produtos */
+    .servico-card h3 {
+        font-size: 16px;
+    }
+
+    .btn-ver-mais, .btn-ver-mais2 {
+        font-size: 12px;
+    }
+
+    /* Sobre Nós */
+    .destaques {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destaques img {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    /* Mobile Menu ajustado para telas pequenas */
+    #mobile_menu a {
+        font-size: 16px;
+    }
+}
+
