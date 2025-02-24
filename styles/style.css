@@ -215,3 +215,184 @@ body{
 .destaque p {
     font-size: 14px;
 }
+
+@media screen and (max-width: 768px) {
+
+    #banner h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+    
+        width: 80%;
+        text-align: start;
+    }
+    
+    #banner h1 span {
+        font-family: "Montserrat", sans-serif;
+        color: #25463C;
+        font-weight: bold;
+    }
+    
+    .banner-content{
+        margin-left: 10px;
+    }
+
+    /* Serviços */
+#servicos {
+    text-align: center;
+    padding: 40px 15px;
+
+    width: 80%;
+}
+
+#servicos h2{
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    width: 130%;
+
+    margin-left: -27px;
+}
+
+.servicos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.servico-card {
+    margin-bottom: 20px;
+}
+
+.servico-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra mais intensa */
+}
+
+.servico-card img{
+    height: 150px;
+}
+
+.servico-card h3 {
+    margin: 15px 0;
+
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 10px 0 20px 0;
+}
+
+.btn-ver-mais {
+    display: inline-block;
+    
+    width: 80%;
+    background-color: #2B876B;
+    color: white;
+
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.btn-ver-mais2 {
+    display: inline-block;
+    
+    width: 80%;
+    background-color: white;
+    color: #2B876B;
+
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+/* Sobre Nós */
+#sobre-nos {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 90%;
+
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.textAbout{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#sobre-nos h2{
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
+    font-size: 36px;
+    text-transform: uppercase;
+
+    padding-bottom: 45px;
+}
+
+#sobre-nos p{
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
+    font-size: 18px;
+    color: #584F4F;
+
+    width: 100%;
+
+    text-align: justify;
+}
+
+
+#sobre-nos span{
+    font-family: "Montserrat", sans-serif;
+    text-align: start;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #25463C;
+}
+
+.destaques{
+    display: none;
+}
+
+.destaques img{
+    width: 75%;
+
+    padding-bottom: 30px;
+}
+
+.destaque h3 {
+    color: #2B876B;
+    font-size: 20px;
+}
+
+.destaque p {
+    font-size: 14px;
+}
+
+}

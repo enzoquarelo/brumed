@@ -190,6 +190,11 @@ footer p {
     font-size: 14px;
 }
 
+.about-page footer {
+    position: absolute;
+    bottom: 0px;
+}
+
 /* Ajustes para o Mobile */
 @media screen and (max-width: 768px) {
     .links_header,
@@ -245,5 +250,10 @@ footer p {
         display: flex;
         justify-content: space-between;
         width: 65%;
+    }
+
+    .about-page footer {
+        position: absolute;
+        bottom: -650px;
     }
 }
